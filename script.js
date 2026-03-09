@@ -103,3 +103,64 @@ document.querySelectorAll('section').forEach(section => {
     section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(section);
 });
+
+
+
+window.addEventListener('scroll', function(
+
+) {
+    let scrollTop = document.documentElement.scrollTop
+    let scrollHeight = this.document.documentElement.scrollHeight -
+    this.document.documentElement.clientHeight
+
+    let progress = (scrollTop / scrollHeight) * 100
+    document.querySelector('.scroll-bar').style.width = progress + '%'
+})
+
+
+const words = ["Software Developer","React","Problem-solver","Laravel-Developer"]
+
+let wordIndex = 0
+let charIndex = 0
+let isTyping = true
+
+const typingText = document.querySelector('.typing')
+
+function type() {
+    if(charIndex < words[wordIndex].length){
+        typingText.textContent += words[wordIndex].charAt(charIndex)
+        charIndex++
+        setTimeout(type, 100)
+    }
+    else { 
+        setTimeout(erase, 2000)
+    }
+}
+
+function erase() {   
+    if (charIndex > 0) {
+        typingText.textContent = words[wordIndex].substring(0, charIndex - 1)
+        charIndex--
+        setTimeout(erase, 50)
+    }
+    else {
+        // Move to next word
+        wordIndex++
+        if (wordIndex >= words.length) {
+            wordIndex = 0
+        }
+        setTimeout(type, 500)
+    }
+}
+
+document.addEventListener("DOMContentLoaded", type)
+
+
+
+const toggle = 
+document.getElementById("darkModeToggle")
+toggle.addEventListner("click",function()
+{
+    document.body.classList.toggle("dark-mode")
+
+})

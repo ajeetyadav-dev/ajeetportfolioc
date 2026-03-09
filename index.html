@@ -10,6 +10,7 @@
 <body>
     <!-- =========================Navbar============================================ -->
     <header>
+        <div class="scroll-bar"></div>
         <nav class="navbar">
             <h1 class="logo">AJ</h1>
             <ul class="nav-links">
@@ -19,6 +20,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button id="darkModeToggle">🌙</button>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
@@ -29,7 +31,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h2>Hello I'm Ajeet</h2>
-            <p>I'm a Software Developer</p>
+            <p class="typing"></p>
             <button class="btn-primary" id="view-projects">View Projects</button>
         </div>
         <div class="social-links">
@@ -72,6 +74,7 @@
                     <div class="project-image">
                         <img src="https://picsum.photos/seed/calculator/400/250.jpg" alt="Calculator App">
                     </div>
+                    <div class="overlay"></div>
                     <div class="project-content">
                         <h3>Calculator App</h3>
                         <p>A fully functional calculator built with JavaScript, HTML, and CSS. Performs basic arithmetic operations with a clean, intuitive interface.</p>
@@ -90,6 +93,7 @@
                     <div class="project-image">
                         <img src="https://picsum.photos/seed/weather/400/250.jpg" alt="Weather App">
                     </div>
+                    <div class="overlay"></div>
                     <div class="project-content">
                         <h3>Weather App</h3>
                         <p>A weather application that fetches real-time weather data from an API. Displays current conditions and forecasts for any location.</p>
@@ -108,6 +112,7 @@
                     <div class="project-image">
                         <img src="https://picsum.photos/seed/portfolio/400/250.jpg" alt="Portfolio Website">
                     </div>
+                    <div class="overlay"></div>
                     <div class="project-content">
                         <h3>Portfolio Website</h3>
                         <p>A responsive portfolio website showcasing projects and skills. Features smooth animations and a modern design aesthetic.</p>
